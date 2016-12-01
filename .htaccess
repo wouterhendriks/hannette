@@ -1,0 +1,18 @@
+RewriteEngine on
+<Limit PUT DELETE>
+    AuthUserFile /Users/wouter/www/sublime/.htpasswd
+    AuthType Basic
+    AuthName "Simply store"
+    Require valid-user
+
+    RewriteCond %{REQUEST_METHOD} PUT
+    RewriteRule ^(.*)$ store.php [L]
+
+    RewriteCond %{REQUEST_METHOD} DELETE
+    RewriteRule ^(.*)$ store.php [L]
+</Limit>
+<Limit GET POST>
+	RewriteRule ^logout$ logout.php [L]
+</Limit>
+Options +Indexes
+ErrorDocument 404 router.php
