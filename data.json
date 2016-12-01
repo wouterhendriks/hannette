@@ -68,11 +68,11 @@
 			"href": "index.html",
 			"innerHTML": "Salon Hannette"
 		},
-		"hero description": "",
+		"hero description": "Lorem ipsum",
 		"hero start": {
 			"href": "#banner",
 			"class": "button circled scrolly",
-			"innerHTML": "Smtart"
+			"innerHTML": "Start"
 		}
 	}
 }
