@@ -72,7 +72,7 @@
 		"hero start": {
 			"href": "#banner",
 			"class": "button circled scrolly",
-			"innerHTML": "Start"
+			"innerHTML": "Smtart"
 		}
 	}
 }
