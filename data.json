@@ -1,0 +1,83 @@
+{
+	"/simply-edit/sublime/": {
+		"menu": []
+	},
+	"/leudal/": {
+		"sections": [
+			{
+				"carousel items": [
+					{
+						"carousel items image": {
+							"href": "#",
+							"class": "image featured",
+							"innerHTML": "<img src=\"images/pic02.jpg\" alt=\"\">"
+						},
+						"carousel items title": "<a href=\"#\">Huis wijnen</a>",
+						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna.",
+						"data-simply-template": "0"
+					},
+					{
+						"carousel items image": {
+							"href": "#",
+							"class": "image featured",
+							"innerHTML": "<img src=\"images/pic02.jpg\" alt=\"\">"
+						},
+						"carousel items title": "<a href=\"#\">Huis wijnen</a>",
+						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna.",
+						"data-simply-template": "0"
+					},
+					{
+						"carousel items image": {
+							"href": "#",
+							"class": "image featured",
+							"innerHTML": "<img src=\"images/pic02.jpg\" alt=\"\">"
+						},
+						"carousel items title": "<a href=\"#\">Huis wijnen</a>",
+						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna.",
+						"data-simply-template": "0"
+					},
+					{
+						"carousel items image": {
+							"href": "#",
+							"class": "image featured",
+							"innerHTML": "<img src=\"images/pic02.jpg\" alt=\"\">"
+						},
+						"carousel items title": "<a href=\"#\">Huis wijnen</a>",
+						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna.",
+						"data-simply-template": "0"
+					},
+					{
+						"carousel items image": {
+							"href": "#",
+							"class": "image featured",
+							"innerHTML": "<img src=\"images/pic02.jpg\" alt=\"\">"
+						},
+						"carousel items title": "<a href=\"#\">Huis wijnen</a>",
+						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna.",
+						"data-simply-template": "0"
+					}
+				],
+				"carousel title": "Titel van de carousel",
+				"carousel description": "Omschrijving boven de carousel",
+				"data-simply-template": "carousel"
+			}
+		],
+		"meta title": "Salon Hannette - Dames en Heren Salon Haaksbergen",
+		"meta author": {
+			"content": "pixelhint.com"
+		},
+		"meta description": {
+			"content": "Dames en Herensalon Hannette Haaksbergen"
+		},
+		"hero title": {
+			"href": "index.html",
+			"innerHTML": "Salon Hannette"
+		},
+		"hero description": "",
+		"hero start": {
+			"href": "#banner",
+			"class": "button circled scrolly",
+			"innerHTML": "Start"
+		}
+	}
+}
