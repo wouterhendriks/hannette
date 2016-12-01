@@ -12,7 +12,7 @@
 							"class": "image featured",
 							"innerHTML": "<img src=\"images/pic02.jpg\" alt=\"\">"
 						},
-						"carousel items title": "<p><a href=\"#\">Huis wijnen</a>1</p>",
+						"carousel items title": "<a href=\"#\">Huis wijnen</a>",
 						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
 					},
 					{
@@ -55,6 +55,59 @@
 				"carousel title": "Titel van de carousel",
 				"carousel description": "",
 				"data-simply-template": "carousel"
+			},
+			{
+				"highlights items": [
+					{
+						"highlights items image": {
+							"href": "#",
+							"class": "image featured",
+							"innerHTML": "<img src=\"images/pic07.jpg\" alt=\"\">"
+						},
+						"highlights items title": "<a href=\"#\">Titel van dit item</a>",
+						"highlights items description": "",
+						"data-simply-template": "0"
+					},
+					{
+						"highlights items image": {
+							"href": "#",
+							"class": "image featured",
+							"innerHTML": "<img src=\"images/pic07.jpg\" alt=\"\">"
+						},
+						"highlights items title": "<a href=\"#\">Titel van dit item</a>",
+						"highlights items description": "",
+						"data-simply-template": "0"
+					},
+					{
+						"highlights items image": {
+							"href": "#",
+							"class": "image featured",
+							"innerHTML": "<img src=\"images/pic07.jpg\" alt=\"\">"
+						},
+						"highlights items title": "<a href=\"#\">Titel van dit item</a>",
+						"highlights items description": "",
+						"data-simply-template": "0"
+					}
+				],
+				"highlights title": "Titel van 'hoogtepunten' blok",
+				"highlights description": "",
+				"data-simply-template": "highlights"
+			},
+			{
+				"textblock image": {
+					"href": "#",
+					"class": "image featured",
+					"innerHTML": "<img src=\"images/pic06.jpg\" alt=\"\">"
+				},
+				"textblock title": "Titel van dit tekstblok",
+				"textblock introduction": "Introductie van dit tekstblok",
+				"textblock description": "",
+				"textblock buttontitle": {
+					"href": "#",
+					"class": "button",
+					"innerHTML": "Lees verder"
+				},
+				"data-simply-template": "textblock"
 			}
 		],
 		"meta title": "Salon Hannette - Dames en Heren Salon Haaksbergen",
