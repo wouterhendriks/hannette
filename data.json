@@ -58,7 +58,7 @@
 					}
 				],
 				"carousel title": "Titel van de carousel",
-				"carousel description": "Omschrijving boven de carousel",
+				"carousel description": "",
 				"data-simply-template": "carousel"
 			}
 		],
