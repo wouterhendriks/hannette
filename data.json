@@ -124,5 +124,25 @@
 			"class": "button circled scrolly",
 			"innerHTML": "Start"
 		}
+	},
+	"/new-page/": {
+		"sections": [],
+		"meta title": "Salon Hannette - Dames en Heren Salon Haaksbergen",
+		"meta author": {
+			"content": "pixelhint.com"
+		},
+		"meta description": {
+			"content": "Dames en Herensalon Hannette Haaksbergen"
+		},
+		"hero title": {
+			"href": "index.html",
+			"innerHTML": "Salon Hannette"
+		},
+		"hero description": "",
+		"hero start": {
+			"href": "#banner",
+			"class": "button circled scrolly",
+			"innerHTML": "Start"
+		}
 	}
 }
