@@ -185,24 +185,9 @@
 			"innerHTML": "Start"
 		}
 	},
-	"/lala2/": {
-		"sections": [],
+	"/lala3/": {
 		"meta title": "Salon Hannette - Dames en Heren Salon Haaksbergen",
-		"meta author": {
-			"content": "pixelhint.com"
-		},
-		"meta description": {
-			"content": "Dames en Herensalon Hannette Haaksbergen"
-		},
-		"hero title": {
-			"href": "index.html",
-			"innerHTML": "Salon van Hannette"
-		},
-		"hero description": "",
-		"hero start": {
-			"href": "#banner",
-			"class": "button circled scrolly",
-			"innerHTML": "Start"
-		}
+		"sections": [],
+		"data-simply-page-template": "index.html"
 	}
 }
