@@ -6,13 +6,13 @@ RewriteEngine on
     Require valid-user
 
     RewriteCond %{REQUEST_METHOD} PUT
-    RewriteRule ^(.*)$ store.php [L]
+    RewriteRule ^(.*)$ store.php [L,END]
 
     RewriteCond %{REQUEST_METHOD} DELETE
-    RewriteRule ^(.*)$ store.php [L]
+    RewriteRule ^(.*)$ store.php [L,END]
 </Limit>
 <Limit GET POST>
-	RewriteRule ^logout$ logout.php [L]
+	RewriteRule ^logout$ logout.php [L,END]
 </Limit>
 Options +Indexes
 ErrorDocument 404 router.php
