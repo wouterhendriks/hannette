@@ -293,35 +293,27 @@ Lacus natoque cras rhoncus curae dignissim ultricies. Convallis orci aliquet.
 
 
 
-
-    <script>
-        var seSettings = {
-            'simply-image' : {
-                'responsive' : {
-                    'sizes' : [ 1024, 720, 640, 320, 160 ]
-                }
-            },
-            'plugins' : [ 'plugin.simply-scaler.html' ]
-        };
-    </script>
-
-
     <!--
     src="https://cdn.simplyedit.io/1/simply-edit.js"
     data-api-key="localhost"
     -->
 
-    <script
-    src="//beta.simplyedit.io/0/simply-edit.js"
-    data-api-key="github"
-		data-simply-images="/images/"
-		data-simply-files="/files/"
-		data-simply-settings="seSettings"
-	></script>
+	<script>
+        var seSettings = {
+            'pageTemplates' : {
+                'templates': [
+                    {name: "Main page", template: "index.html"}
+                ]
+            }
+        };
+    </script>
 
-
-
-
+	<script src="//cdn.simplyedit.io/1/simply-edit.js" 
+        data-api-key="github"
+        data-simply-settings="seSettings"
+	data-simply-images="/images/"
+	data-simply-files="/files/">
+	</script>
 
 </body>
 </html>
