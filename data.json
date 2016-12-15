@@ -1,7 +1,40 @@
 {
 	"/hannette/": {
 		"meta title": "Salon Hannette - Dames en Heren Salon Haaksbergen",
-		"sections": []
+		"sections": [
+			{
+				"carousel items": [
+					{
+						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
+						"carousel items title": "Huiswijnen",
+						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
+					},
+					{
+						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
+						"carousel items title": "Huiswijnen",
+						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
+					},
+					{
+						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
+						"carousel items title": "Huiswijnen",
+						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
+					},
+					{
+						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
+						"carousel items title": "Huiswijnen",
+						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
+					},
+					{
+						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
+						"carousel items title": "Huiswijnen",
+						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
+					}
+				],
+				"carousel title": "Titel van de carousel",
+				"carousel description": "",
+				"data-simply-template": "carousel"
+			}
+		]
 	},
 	"/": {
 		"footer address": "Contactgegevens",
