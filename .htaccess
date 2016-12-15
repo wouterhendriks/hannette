@@ -1,6 +1,6 @@
 RewriteEngine on
 <Limit PUT DELETE>
-    AuthUserFile /Users/wouter/www/sublime/.htpasswd
+    AuthUserFile /Users/wouter/www/salon_hannette/.htpasswd
     AuthType Basic
     AuthName "Simply store"
     Require valid-user
