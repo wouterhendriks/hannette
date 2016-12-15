@@ -21,6 +21,12 @@
 	});
 
 	$(function() {
+		$('html').toggleClass('no-simply-edit', location.hash !== '#simply-edit');
+
+		// setup 'start' button based on actual content
+		$('div[data-simply-list="sections"] > div').first().attr('id', 'start-scroll');
+
+		$('body').toggleClass('homepage', location.pathname === '/');
 
 		var	$window = $(window),
 			$body = $('body');
@@ -51,6 +57,8 @@
 			$('#nav > ul').dropotron({
 				mode: 'fade',
 				speed: 350,
+				hideDelay: 0,
+				expandMode: 'hover',
 				noOpenerFade: true,
 				alignment: 'center'
 			});
@@ -238,7 +246,6 @@
 					});
 
 			});
-
 	});
 
 })(jQuery);
