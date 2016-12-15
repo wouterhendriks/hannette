@@ -194,5 +194,13 @@
 		"meta title": "Salon Hannette - Dames en Heren Salon Haaksbergen",
 		"sections": [],
 		"data-simply-page-template": "index.html"
+	},
+	"/hannette/": {
+		"meta title": "Salon Hannette - Dames en Heren Salon Haaksbergen",
+		"sections": []
+	},
+	"/": {
+		"footer address": "Contactgegevens",
+		"menu": []
 	}
 }
