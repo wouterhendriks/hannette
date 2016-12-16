@@ -26,7 +26,10 @@
 		// setup 'start' button based on actual content
 		$('div[data-simply-list="sections"] > div').first().attr('id', 'start-scroll');
 
-		$('body').toggleClass('homepage', location.pathname === '/');
+		var isHome =  location.pathname === '/'
+							 || (location.host === 'wouterhendriks.github.io' && location.pathname === '/hannette/');
+
+		$('body').toggleClass('homepage', isHome);
 
 		var	$window = $(window),
 			$body = $('body');
