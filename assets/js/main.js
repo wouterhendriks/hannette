@@ -23,9 +23,6 @@
 	$(function() {
 		$('html').toggleClass('no-simply-edit', location.hash !== '#simply-edit');
 
-		// setup 'start' button based on actual content
-		$('div[data-simply-list="sections"] > div').first().attr('id', 'start-scroll');
-
 		var isHome =  location.pathname === '/'
 							 || (location.host === 'wouterhendriks.github.io' && location.pathname === '/hannette/');
 
