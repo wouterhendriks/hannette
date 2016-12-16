@@ -33,6 +33,78 @@
 				"carousel title": "Titel van de carousel",
 				"carousel description": "",
 				"data-simply-template": "carousel"
+			},
+			{
+				"textblock image": "<img src=\"images/pic06.jpg\" alt=\"\">",
+				"textblock title": "Titel van dit tekstblok",
+				"textblock introduction": "Introductie van dit tekstblok",
+				"textblock description": "",
+				"textblock buttontitle": {
+					"href": "#",
+					"class": "button",
+					"innerHTML": "Lees verder"
+				},
+				"data-simply-template": "textblock"
+			},
+			{
+				"highlights items": [
+					{
+						"highlights items image": {
+							"href": "#",
+							"class": "image featured",
+							"innerHTML": "<img src=\"images/pic07.jpg\" alt=\"\">"
+						},
+						"highlights items title": "<a href=\"#\">Titel van dit item</a>",
+						"highlights items description": ""
+					},
+					{
+						"highlights items image": {
+							"href": "#",
+							"class": "image featured",
+							"innerHTML": "<img src=\"images/pic07.jpg\" alt=\"\">"
+						},
+						"highlights items title": "<a href=\"#\">Titel van dit item</a>",
+						"highlights items description": ""
+					},
+					{
+						"highlights items image": {
+							"href": "#",
+							"class": "image featured",
+							"innerHTML": "<img src=\"images/pic07.jpg\" alt=\"\">"
+						},
+						"highlights items title": "<a href=\"#\">Titel van dit item</a>",
+						"highlights items description": ""
+					}
+				],
+				"highlights title": "Titel van 'hoogtepunten' blok",
+				"highlights description": "",
+				"data-simply-template": "highlights"
+			},
+			{
+				"logos items": [
+					{
+						"logos items link": {
+							"href": "#",
+							"class": "logos__logo",
+							"innerHTML": "<img src=\"images/logo-alcina.png\" alt=\"Alcina\">"
+						}
+					},
+					{
+						"logos items link": {
+							"href": "#",
+							"class": "logos__logo",
+							"innerHTML": "<img src=\"images/logo-alcina.png\" alt=\"Alcina\">"
+						}
+					},
+					{
+						"logos items link": {
+							"href": "#",
+							"class": "logos__logo",
+							"innerHTML": "<img src=\"images/logo-alcina.png\" alt=\"Alcina\">"
+						}
+					}
+				],
+				"data-simply-template": "logos"
 			}
 		]
 	},
