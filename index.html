@@ -164,34 +164,17 @@
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js" type="text/javascript"></script>
 
- 	<script>
- 	  // Use SimplyEdit loader from https://github.com/Potherca/simplyedit-loader
-		!(function(s,i,m,p,l,y){function c(i,e,n){(void 0===n||n===s.location.host)&&l.setAttribute(i,e)}
-		l=l||i.createElement(m),l.async=1,l.src="https://cdn.simplyedit.io/1/simply-edit.js",
-		y=y||i.scripts[0],y.parentNode.insertBefore(l,y),s[p]=s[p]||{key:function(t,i){
-		c("data-api-key",t,i)},set:function(t,i,e){c("data-simply-"+t,i,e)}}
-		})(window,document,"script","simply");
+	<script>
+	  var key = 'pink-care-6309';
+	  if (location.host === 'wouterhendriks.github.io')
+	  	key = 'github';
 
-		/*
-		  Local URL: salon-hannette.local
-      Test URL: wouterhendriks.github.io/hannette
-      Production URL: www.salonhannette.nl
-    */
-		simply.key('pink-care-6309');
-		simply.key('github', 'wouterhendriks.github.io');
-		simply.key('pink-care-6309', 'salonhannette.nl');
-
-		simply.set('images', '/images/');
-		simply.set('files', '/files/');
+	  document.write( '\x3Cscript '
+	  	            + 'src="https://cdn.simplyedit.io/1/simply-edit.js"'
+	  					  	+ 'data-api-key="' + key + '"'
+	  					  	+ 'data-simply-images="/images/"'
+	  					  	+ 'data-simply-files="/files/"'
+	  					  	+ '>\x3C/script>');
 	</script>
-<!--
-	<script
-		src="https://cdn.simplyedit.io/1/simply-edit.js"
-		data-api-key="pink-care-6309"
-		data-simply-images="/images/"
-		data-simply-files="/files/"
-		>
-	</script>
--->
 </body>
 </html>
