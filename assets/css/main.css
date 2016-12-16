@@ -2994,3 +2994,7 @@ html.no-simply-edit .dropotron.simply-empty {
 .logos__logo-container {
 	text-align: center;
 }
+
+.logos__logo {
+	border-bottom: 0;
+}

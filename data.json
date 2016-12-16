@@ -1,54 +1,32 @@
 {
-	"/simply-edit/sublime/": {
-		"menu": []
-	},
-	"/leudal/": {
+	"/hannette/": {
+		"meta title": "Salon Hannette - Dames en Heren Salon Haaksbergen",
 		"sections": [
 			{
 				"carousel items": [
 					{
-						"carousel items image": {
-							"href": "#",
-							"class": "image featured",
-							"innerHTML": "<img src=\"images/pic02.jpg\" alt=\"\">"
-						},
-						"carousel items title": "<a href=\"#\">Huis wijnen</a>",
+						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
+						"carousel items title": "Huiswijnen",
 						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
 					},
 					{
-						"carousel items image": {
-							"href": "#",
-							"class": "image featured",
-							"innerHTML": "<img src=\"images/pic02.jpg\" alt=\"\">"
-						},
-						"carousel items title": "<a href=\"#\">Huis wijnen</a>",
+						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
+						"carousel items title": "Huiswijnen",
 						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
 					},
 					{
-						"carousel items image": {
-							"href": "#",
-							"class": "image featured",
-							"innerHTML": "<img src=\"images/pic02.jpg\" alt=\"\">"
-						},
-						"carousel items title": "<a href=\"#\">Huis wijnen</a>",
+						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
+						"carousel items title": "Huiswijnen",
 						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
 					},
 					{
-						"carousel items image": {
-							"href": "#",
-							"class": "image featured",
-							"innerHTML": "<img src=\"images/pic02.jpg\" alt=\"\">"
-						},
-						"carousel items title": "<a href=\"#\">Huis wijnen</a>",
+						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
+						"carousel items title": "Huiswijnen",
 						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
 					},
 					{
-						"carousel items image": {
-							"href": "#",
-							"class": "image featured",
-							"innerHTML": "<img src=\"images/pic02.jpg\" alt=\"\">"
-						},
-						"carousel items title": "<a href=\"#\">Huis wijnen</a>",
+						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
+						"carousel items title": "Huiswijnen",
 						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
 					}
 				],
@@ -57,11 +35,7 @@
 				"data-simply-template": "carousel"
 			},
 			{
-				"textblock image": {
-					"href": "#",
-					"class": "image featured",
-					"innerHTML": "<img src=\"images/pic06.jpg\" alt=\"\">"
-				},
+				"textblock image": "<img src=\"images/pic06.jpg\" alt=\"\">",
 				"textblock title": "Titel van dit tekstblok",
 				"textblock introduction": "Introductie van dit tekstblok",
 				"textblock description": "",
@@ -105,94 +79,37 @@
 				"highlights title": "Titel van 'hoogtepunten' blok",
 				"highlights description": "",
 				"data-simply-template": "highlights"
+			},
+			{
+				"logos items": [
+					{
+						"logos items link": {
+							"href": "#",
+							"class": "logos__logo",
+							"innerHTML": "<img src=\"images/logo-alcina.png\" alt=\"Alcina\">"
+						}
+					},
+					{
+						"logos items link": {
+							"href": "#",
+							"class": "logos__logo",
+							"innerHTML": "<img src=\"images/logo-alcina.png\" alt=\"Alcina\">"
+						}
+					},
+					{
+						"logos items link": {
+							"href": "#",
+							"class": "logos__logo",
+							"innerHTML": "<img src=\"images/logo-alcina.png\" alt=\"Alcina\">"
+						}
+					}
+				],
+				"data-simply-template": "logos"
 			}
-		],
-		"meta title": "Salon Hannette - Dames en Heren Salon Haaksbergen",
-		"meta author": {
-			"content": "pixelhint.com"
-		},
-		"meta description": {
-			"content": "Dames en Herensalon Hannette Haaksbergen"
-		},
-		"hero title": {
-			"href": "index.html",
-			"innerHTML": "Salon Hannette"
-		},
-		"hero description": "",
-		"hero start": {
-			"href": "#banner",
-			"class": "button circled scrolly",
-			"innerHTML": "Start"
-		}
+		]
 	},
-	"/new-page/": {
-		"sections": [],
-		"meta title": "Salon Hannette - Dames en Heren Salon Haaksbergen",
-		"meta author": {
-			"content": "pixelhint.com"
-		},
-		"meta description": {
-			"content": "Dames en Herensalon Hannette Haaksbergen"
-		},
-		"hero title": {
-			"href": "index.html",
-			"innerHTML": "Salon Hannette"
-		},
-		"hero description": "",
-		"hero start": {
-			"href": "#banner",
-			"class": "button circled scrolly",
-			"innerHTML": "Start"
-		}
-	},
-	"/new2/": {
-		"sections": [],
-		"meta title": "Salon Hannette - Dames en Heren Salon Haaksbergen",
-		"meta author": {
-			"content": "pixelhint.com"
-		},
-		"meta description": {
-			"content": "Dames en Herensalon Hannette Haaksbergen"
-		},
-		"hero title": {
-			"href": "index.html",
-			"innerHTML": "Salon Hannette"
-		},
-		"hero description": "",
-		"hero start": {
-			"href": "#banner",
-			"class": "button circled scrolly",
-			"innerHTML": "Start"
-		}
-	},
-	"/lala/": {
-		"sections": [],
-		"meta title": "Salon Hannette - Dames en Heren Salon Haaksbergen",
-		"meta author": {
-			"content": "pixelhint.com"
-		},
-		"meta description": {
-			"content": "Dames en Herensalon Hannette Haaksbergen"
-		},
-		"hero title": {
-			"href": "index.html",
-			"innerHTML": "Salon Hannette"
-		},
-		"hero description": "",
-		"hero start": {
-			"href": "#banner",
-			"class": "button circled scrolly",
-			"innerHTML": "Start"
-		}
-	},
-	"/lala5/": {
-		"meta title": "Salon Hannette - Dames en Heren Salon Haaksbergen",
-		"sections": [],
-		"data-simply-page-template": "index.html"
-	},
-	"/lala6/": {
-		"meta title": "Salon Hannette - Dames en Heren Salon Haaksbergen",
-		"sections": [],
-		"data-simply-page-template": "index.html"
+	"/": {
+		"footer address": "Contactgegevens",
+		"menu": []
 	}
 }
