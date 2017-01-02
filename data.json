@@ -30,7 +30,7 @@
 						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
 					}
 				],
-				"carousel title": "Titel van de carousel",
+				"carousel title": "Dames en Heren Salon Hannette Haaksbergen",
 				"carousel description": "",
 				"data-simply-template": "carousel"
 			},
@@ -106,10 +106,29 @@
 				],
 				"data-simply-template": "logos"
 			}
-		]
+		],
+		"meta author": {
+			"content": "Salon Hannette"
+		},
+		"meta description": {
+			"content": "Dames en Herensalon Hannette Haaksbergen"
+		},
+		"hero title": {
+			"href": "index.html",
+			"innerHTML": "<img src=\"images/logo-hannette-salon.png\">"
+		},
+		"hero description": "",
+		"hero start": {
+			"href": "#start",
+			"class": "button circled scrolly",
+			"innerHTML": "Start"
+		}
 	},
 	"/": {
 		"footer address": "Contactgegevens",
-		"menu": []
+		"menu": [],
+		"footer googlemaps": {
+			"src": "https://www.google.nl/maps?hl=nl&q=Markt+8,+Haaksbergen&sll=52.154563,6.742761&ie=UTF8&hq=&hnear=Markt+8,+7481+HT+Haaksbergen,+Overijssel&t=m&ll=52.154564,6.742762&spn=0.001316,0.003219&z=17&iwloc=A&output=embed"
+		}
 	}
 }
