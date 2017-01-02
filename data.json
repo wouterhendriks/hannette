@@ -6,34 +6,39 @@
 				"carousel items": [
 					{
 						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
-						"carousel items title": "Dames",
+						"carousel items title": "Huiswijnen",
 						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
 					},
 					{
 						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
-						"carousel items title": "Heren",
+						"carousel items title": "Huiswijnen",
 						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
 					},
 					{
 						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
-						"carousel items title": "<p>Kinderen</p>",
+						"carousel items title": "Huiswijnen",
 						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
 					},
 					{
 						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
-						"carousel items title": "Facebook",
+						"carousel items title": "Huiswijnen",
+						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
+					},
+					{
+						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
+						"carousel items title": "Huiswijnen",
 						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
 					}
 				],
 				"carousel title": "Dames en Heren Salon Hannette Haaksbergen",
-				"carousel description": "Kom gerust eens bij ons binnen, de koffie staat klaar. Direct een afspraak maken kan natuurlijk ook, bellen is dan het snelste.",
+				"carousel description": "",
 				"data-simply-template": "carousel"
 			},
 			{
 				"textblock image": "<img src=\"images/pic06.jpg\" alt=\"\">",
 				"textblock title": "Welkom in onze salon",
 				"textblock introduction": "Introductie van dit tekstblok",
-				"textblock description": "Salon Hannette, al sinds 1976 bezig met hairstyling vindt u in het monumentale pand aan de markt 8 in het centrum van Haaksbergen.",
+				"textblock description": "",
 				"textblock buttontitle": {
 					"href": "#",
 					"class": "button",
