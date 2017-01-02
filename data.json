@@ -125,7 +125,7 @@
 		}
 	},
 	"/": {
-		"footer address": "Contactgegevens",
+		"footer address": "<h3>Contactgegevens</h3><p class=\"simply-text-align-left\"><br>Markt 8<br>7481 HT Haaksbergen<br>T: 053-572 37 56</p>",
 		"menu": [],
 		"footer googlemaps": {
 			"src": "https://www.google.nl/maps?hl=nl&q=Markt+8,+Haaksbergen&sll=52.154563,6.742761&ie=UTF8&hq=&hnear=Markt+8,+7481+HT+Haaksbergen,+Overijssel&t=m&ll=52.154564,6.742762&spn=0.001316,0.003219&z=17&iwloc=A&output=embed"
