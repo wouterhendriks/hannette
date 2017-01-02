@@ -2974,7 +2974,7 @@
 
 /************************************************************************
 
-   changes in the update to Simply Edit
+   changes after updating to Simply Edit
 
 ************************************************************************/
 html.no-simply-edit .dropotron.simply-empty {
@@ -2997,4 +2997,46 @@ html.no-simply-edit .dropotron.simply-empty {
 
 .logos__logo {
 	border-bottom: 0;
+}
+
+.header-phone {
+	position: absolute;
+	display: inline-block;
+	top: 26px;
+	right: 25px;
+	z-index: 100;
+}
+
+.header-phone__button {
+	padding: 5px 15px;
+}
+
+.header-phone__button .fa {
+	position: relative;
+	top: 1px;
+	margin-right: 5px;
+}
+
+@media screen and (max-width: 736px) {
+	.header-phone {
+		position: fixed;
+		top: 13px;
+		right: 13px;
+		padding: 0;
+	}
+
+	.header-phone__button {
+		line-height: 40px;
+		font-size: 24px;
+	}
+
+	.header-phone__button .fa {
+		position: relative;
+		top: 0;
+		margin-right: 0;
+	}
+
+	.header-phone__number {
+		display: none;
+	}
 }
