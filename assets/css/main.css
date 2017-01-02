@@ -3004,7 +3004,7 @@ html.no-simply-edit .dropotron.simply-empty {
 	display: inline-block;
 	top: 26px;
 	right: 25px;
-	z-index: 100;
+	z-index: 20001;
 }
 
 .header-phone__button {
