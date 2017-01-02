@@ -31,9 +31,9 @@
 			},
 			{
 				"textblock image": "<img src=\"images/pic06.jpg\" alt=\"\">",
-				"textblock title": "Titel van dit tekstblok",
+				"textblock title": "Welkom in onze salon",
 				"textblock introduction": "Introductie van dit tekstblok",
-				"textblock description": "",
+				"textblock description": "Salon Hannette, al sinds 1976 bezig met hairstyling vindt u in het monumentale pand aan de markt 8 in het centrum van Haaksbergen.",
 				"textblock buttontitle": {
 					"href": "#",
 					"class": "button",
