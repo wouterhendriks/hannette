@@ -47,7 +47,7 @@
 						"logos items link": {
 							"href": "#",
 							"class": "logos__logo",
-							"innerHTML": "<img src=\"images/logo-alcina.png\" alt=\"Alcina\">"
+							"innerHTML": ""
 						}
 					},
 					{
