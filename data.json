@@ -6,18 +6,18 @@
 				"carousel items": [
 					{
 						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
-						"carousel items title": "Huiswijnen",
-						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
+						"carousel items title": "Dames",
+						"carousel items description": "Bekijk hier de voorbeelden van tevreden klanten."
 					},
 					{
 						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
-						"carousel items title": "Huiswijnen",
-						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
+						"carousel items title": "Heren",
+						"carousel items description": "Bekijk hier de voorbeelden van tevreden klanten."
 					},
 					{
 						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
-						"carousel items title": "Huiswijnen",
-						"carousel items description": "Commodo id natoque malesuada sollicitudin elit suscipit magna."
+						"carousel items title": "Kinderen",
+						"carousel items description": "Bekijk hier de voorbeelden van tevreden klanten.."
 					},
 					{
 						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
@@ -32,8 +32,8 @@
 			{
 				"textblock image": "<img src=\"images/pic06.jpg\" alt=\"\">",
 				"textblock title": "Welkom in onze salon",
-				"textblock introduction": "Introductie van dit tekstblok",
-				"textblock description": "Salon Hannette, al sinds 1976 bezig met hairstyling vindt u in het monumentale pand aan de markt 8 in het centrum van Haaksbergen",
+				"textblock introduction": "Salon Hannette, al sinds 1976 bezig met hairstyling vindt u in het monumentale pand aan de markt 8 in het centrum van Haaksbergen. Deze prachtige entourage biedt al sinds 1990 onderdak aan de salon voor jong en oud. Met een team van 8 ervaren stylisten, waaronder 2 master Colorist kleurexperts, staan wij van dinsdag tot en met zaterdag voor u klaar.&nbsp;",
+				"textblock description": "",
 				"textblock buttontitle": {
 					"href": "#",
 					"class": "button",
@@ -42,35 +42,7 @@
 				"data-simply-template": "textblock"
 			},
 			{
-				"highlights items": [
-					{
-						"highlights items image": {
-							"href": "#",
-							"class": "image featured",
-							"innerHTML": "<img src=\"images/pic07.jpg\" alt=\"\">"
-						},
-						"highlights items title": "<a href=\"#\">Titel van dit item</a>",
-						"highlights items description": ""
-					},
-					{
-						"highlights items image": {
-							"href": "#",
-							"class": "image featured",
-							"innerHTML": "<img src=\"images/pic07.jpg\" alt=\"\">"
-						},
-						"highlights items title": "<a href=\"#\">Titel van dit item</a>",
-						"highlights items description": ""
-					},
-					{
-						"highlights items image": {
-							"href": "#",
-							"class": "image featured",
-							"innerHTML": "<img src=\"images/pic07.jpg\" alt=\"\">"
-						},
-						"highlights items title": "<a href=\"#\">Titel van dit item</a>",
-						"highlights items description": ""
-					}
-				],
+				"highlights items": [],
 				"highlights title": "Titel van 'hoogtepunten' blok",
 				"highlights description": "",
 				"data-simply-template": "highlights"
