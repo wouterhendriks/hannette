@@ -31,7 +31,7 @@
 			},
 			{
 				"textblock image": "<img src=\"images/pic06.jpg\" alt=\"\">",
-				"textblock title": "Welkom in onze salon",
+				"textblock title": "Onze salon",
 				"textblock introduction": "Salon Hannette, al sinds 1976 bezig met hairstyling vindt u vanaf het nieuwe jaar aan de Jhr. von Heijdenstraat 23 in het centrum van Haaksbergen. Met een team van 8 ervaren stylisten, waaronder 2 master Colorist kleurexperts, staan wij van dinsdag tot en met zaterdag voor u klaar.&nbsp;",
 				"textblock description": "",
 				"textblock buttontitle": {
@@ -47,7 +47,7 @@
 						"logos items link": {
 							"href": "#",
 							"class": "logos__logo",
-							"innerHTML": ""
+							"innerHTML": "<img src=\"images/logo-alcina.png\" alt=\"Alcina\">"
 						}
 					},
 					{
@@ -83,6 +83,9 @@
 			"href": "#start",
 			"class": "button circled scrolly",
 			"innerHTML": "Start"
+		},
+		"headerimage": {
+			"src": "images/header.jpg"
 		}
 	},
 	"/": {
