@@ -92,7 +92,7 @@
 		"footer address": "<h3>Contactgegevens</h3><p>Jhr. von Heijdenstraat 23<br>7481 EC Haaksbergen<br>T: 053-572 37 56</p>",
 		"menu": [],
 		"footer googlemaps": {
-			"src": "https://www.google.nl/maps?hl=nl&q=Markt+8,+Haaksbergen&sll=52.154563,6.742761&ie=UTF8&hq=&hnear=Markt+8,+7481+HT+Haaksbergen,+Overijssel&t=m&ll=52.154564,6.742762&spn=0.001316,0.003219&z=17&iwloc=A&output=embed"
+			"src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2447.9105804975684!2d6.742518116157872!3d52.15413587974657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b872bb0b39b8bf%3A0xdb2f6d2cf3be05e4!2sJonkheer+von+Heijdenstraat+23%2C+7481+EC+Haaksbergen!5e0!3m2!1snl!2snl!4v1483451981698"
 		}
 	}
 }
