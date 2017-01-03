@@ -1,6 +1,13 @@
 
 (function($) {
 
+	//cache
+	var headerImageWidth = 0;
+	var headerImageHeight = 0;
+	var $headerImage = null;
+	var $header = null;
+
+  //settings
 	var settings = {
 
 		// Carousels
@@ -22,6 +29,9 @@
 
 	$(function() {
 		$('html').toggleClass('no-simply-edit', location.hash !== '#simply-edit');
+
+		var $headerImage = $('#headerbgimage');
+		var $header = $('#header');
 
 		var isHome =  location.pathname === '/'
 							 || (location.host === 'wouterhendriks.github.io' && location.pathname === '/hannette/');
@@ -241,6 +251,26 @@
 						$window.resize(function() {
 							reelWidth = $reel[0].scrollWidth;
 							$t._update();
+
+							// calculate header image position
+							if (headerImageWidth == 0) {
+								headerImageWidth = $headerImage.width();
+								headerImageHeight = $headerImage.height();
+							}
+
+							var coverCoords = getCoverCoordinates(headerImageWidth,
+																									  headerImageHeight,
+																									  $header.outerWidth(),
+																									  $header.outerHeight(),
+																									  false);
+
+							$headerImage.css({ top: coverCoords.top,
+																 left: coverCoords.left,
+																 width: coverCoords.width,
+																 height: coverCoords.height,
+																 visibility: 'visible',
+															 });
+
 						}).trigger('resize');
 
 					});
@@ -249,3 +279,28 @@
 	});
 
 })(jQuery);
+
+// get the information needed to properly stretch an image
+// (to fully cover (fit or fill) the available space (outwidth/outheight) with the original size (inwidth/inheight) while keeping the aspect ratio)
+function getCoverCoordinates(inwidth, inheight, outwidth, outheight, fit)
+{
+  var infx = !(outwidth > 0);
+  var infy = !(outheight > 0);
+  var dx = infx ? 0 : inwidth / outwidth;
+  var dy = infy ? 0 : inheight / outheight;
+  var scale;
+  if(infx)
+    scale=dy;
+  else if(infy)
+    scale=dx;
+  else if(fit)
+    scale = Math.max(dx,dy);
+  else
+    scale = Math.min(dx,dy);
+
+  return { width: inwidth/scale
+         , height: inheight/scale
+         , top: (outheight - (inheight/scale))/2
+         , left: (outwidth - (inwidth/scale))/2
+         };
+}

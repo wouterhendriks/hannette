@@ -2026,7 +2026,6 @@
 
 	#header {
 		position: relative;
-		background-image: url("../../images/header.jpg");
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -3015,6 +3014,18 @@ html.no-simply-edit .dropotron.simply-empty {
 	position: relative;
 	top: 1px;
 	margin-right: 5px;
+}
+
+.bannercarousel .carouselitems {
+	text-align: center;
+}
+
+#headerbgimage {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
 }
 
 @media screen and (max-width: 736px) {

@@ -21,6 +21,7 @@
   </div>
 	<div id="page-wrapper">
 	<div id="header">
+	  <img id="headerbgimage" src="images/header.jpg" data-simply-field="headerimage" />
 		<div class="inner">
 			<header>
 				<h1><a href="index.html" id="logo" data-simply-field="hero title"><img src="images/logo-hannette-salon.png" /></a></h1>
@@ -67,7 +68,7 @@
 
 				<section class="carousel">
 					<div class="reel">
-						<div data-simply-list="carousel items" data-simply-sortable>
+						<div class="carouselitems" data-simply-list="carousel items" data-simply-sortable>
 							<template>
 								<article>
 									<div class="image featured" data-simply-field="carousel items image"><img src="images/pic02.jpg" alt=""/></div>
@@ -179,6 +180,8 @@
 	  var key = 'pink-care-6309';
 	  if (location.host === 'wouterhendriks.github.io')
 	  	key = 'github';
+	  else if (location.host === 'localhost' || location.host === 'salon-hannette.local')
+	  	key = 'localhost';
 
 	  document.write( '\x3Cscript '
 	  	            + 'src="https://cdn.simplyedit.io/1/simply-edit.js"'
