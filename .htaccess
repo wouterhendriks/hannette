@@ -1,10 +1,5 @@
 RewriteEngine on
 <Limit PUT DELETE>
-    AuthUserFile /Users/wouter/www/salon_hannette/.htpasswd
-    AuthType Basic
-    AuthName "Simply store"
-    Require valid-user
-
     RewriteCond %{REQUEST_METHOD} PUT
     RewriteRule ^(.*)$ store.php [L]
 
@@ -14,5 +9,9 @@ RewriteEngine on
 <Limit GET POST>
 	RewriteRule ^logout$ logout.php [L]
 </Limit>
+
 Options +Indexes
-ErrorDocument 404 router.php
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* router.php [L]
