@@ -1,5 +1,4 @@
 <?php
-die('hoi');
 	error_reporting(E_ALL);
 	ini_set('display_errors',1);
 
@@ -39,8 +38,6 @@ die('hoi');
 				$template = $pageTemplate;
 			}
 		}
-
-		die($template);
 
 		http::response($status);
 		filesystem::readfile($templateDir, $template);
