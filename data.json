@@ -5,22 +5,22 @@
 			{
 				"carousel items": [
 					{
-						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
+						"carousel items image": "<img src=\"img/pic02.jpg\" alt=\"\">",
 						"carousel items title": "Dames",
 						"carousel items description": "Bekijk hier de voorbeelden van tevreden klanten."
 					},
 					{
-						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
+						"carousel items image": "<img src=\"img/pic02.jpg\" alt=\"\">",
 						"carousel items title": "Heren",
 						"carousel items description": "Bekijk hier de voorbeelden van tevreden klanten."
 					},
 					{
-						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
+						"carousel items image": "<img src=\"img/pic02.jpg\" alt=\"\">",
 						"carousel items title": "Kinderen",
 						"carousel items description": "Bekijk hier de voorbeelden van tevreden klanten.."
 					},
 					{
-						"carousel items image": "<img src=\"images/pic02.jpg\" alt=\"\">",
+						"carousel items image": "<img src=\"img/pic02.jpg\" alt=\"\">",
 						"carousel items title": "Facebook",
 						"carousel items description": "Like onze Facebook pagina en blijf op de hoogte van alle ontwikkelingen."
 					}
@@ -30,7 +30,7 @@
 				"data-simply-template": "carousel"
 			},
 			{
-				"textblock image": "<img src=\"images/pic06.jpg\" alt=\"\">",
+				"textblock image": "<img src=\"img/pic06.jpg\" alt=\"\">",
 				"textblock title": "Onze salon",
 				"textblock introduction": "Salon Hannette, al sinds 1976 bezig met hairstyling vindt u vanaf het nieuwe jaar aan de Jhr. von Heijdenstraat 23 in het centrum van Haaksbergen. Met een team van 8 ervaren stylisten, waaronder 2 master Colorist kleurexperts, staan wij van dinsdag tot en met zaterdag voor u klaar.&nbsp;",
 				"textblock description": "",
@@ -47,21 +47,21 @@
 						"logos items link": {
 							"href": "#",
 							"class": "logos__logo",
-							"innerHTML": "<img src=\"images/logo-alcina.png\" alt=\"Alcina\">"
+							"innerHTML": "<img src=\"img/logo-alcina.png\" alt=\"Alcina\">"
 						}
 					},
 					{
 						"logos items link": {
 							"href": "#",
 							"class": "logos__logo",
-							"innerHTML": "<img src=\"images/logo-alcina.png\" alt=\"Alcina\">"
+							"innerHTML": "<img src=\"img/logo-alcina.png\" alt=\"Alcina\">"
 						}
 					},
 					{
 						"logos items link": {
 							"href": "#",
 							"class": "logos__logo",
-							"innerHTML": "<img src=\"images/logo-alcina.png\" alt=\"Alcina\">"
+							"innerHTML": "<img src=\"img/logo-alcina.png\" alt=\"Alcina\">"
 						}
 					}
 				],
@@ -76,7 +76,7 @@
 		},
 		"hero title": {
 			"href": "index.html",
-			"innerHTML": "<img src=\"images/logo-hannette-salon.png\">"
+			"innerHTML": "<img src=\"img/logo-hannette-salon.png\">"
 		},
 		"hero description": "",
 		"hero start": {
@@ -85,7 +85,7 @@
 			"innerHTML": "Start"
 		},
 		"headerimage": {
-			"src": "images/header.jpg"
+			"src": "img/header.jpg"
 		}
 	},
 	"/": {
