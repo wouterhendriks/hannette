@@ -4,21 +4,6 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title data-simply-field="meta title">Salon Hannette - Dames en Heren Salon Haaksbergen</title>
-
-  <script>
-    var key = 'pink-care-6309';
-    var base = '/';
-    if (location.host === 'wouterhendriks.github.io') {
-      key = 'github';
-      base = 'https://wouterhendriks.github.io/hannette/';
-    }
-    else if (location.host === 'salon-hannette.local') {
-      key = 'localhost';
-    }
-
-    document.write('<base href="' + base + '" />');
-  </script>
-
 	<meta name="author" content="Salon Hannette" data-simply-field="meta author">
 	<meta name="description" data-simply-field="meta description" content="Dames en Herensalon Hannette Haaksbergen"/>
 	<!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -192,6 +177,12 @@
 	<script src="/assets/js/main.js" type="text/javascript"></script>
 
 	<script>
+	  var key = 'pink-care-6309';
+	  if (location.host === 'wouterhendriks.github.io')
+	  	key = 'github';
+	  else if (location.host === 'localhost' || location.host === 'salon-hannette.local')
+	  	key = 'localhost';
+
 	  document.write( '\x3Cscript '
 	  	            + 'src="https://cdn.simplyedit.io/1/simply-edit.js"'
 	  					  	+ 'data-api-key="' + key + '"'
