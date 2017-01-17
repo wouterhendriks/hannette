@@ -1,13 +1,14 @@
 <?php
 	require_once('http.php');
 	require_once('filesystem.php');
+	require_once('htpasswd.php');
 
 	filesystem::basedir(__DIR__);
 
 	filesystem::allow('/data/','application/json.*');
 	filesystem::allow('/data/','text/.*');
 
-	filesystem::allow('/img/','image/.*');
+	filesystem::allow('/images/','image/.*');
 
 	filesystem::allow('/files/','.*');
 
@@ -53,13 +54,13 @@
 	$status = 200;
 
 	try {
-		if ( !$request['user'] ) {
-			$status = 401; //Access denied
-			if ( $_SERVER['PHP_AUTH_USER'] ) {
-				$result = [ 'error' => 511, 'message' => 'Webserver not configured to handle Basic Authentication'];
-			} else {
-				$result = [ 'error' => 405, 'message' => 'Access denied' ];
-			}
+		htpasswd::load('.htpasswd');
+		$user = $request['user'] ?: $_SERVER['PHP_AUTH_USER'];
+		$password = $request['password'] ?: $_SERVER['PHP_AUTH_PW'];
+		if ( !$user || !$password || !htpasswd::check($user, $password)) {
+			header('WWW-Authenticate: Basic realm="Simply Store"');
+			$status = 401;
+			$result = ['error' => 405, 'message' => 'Access denied'];
 		} else if ( $request['method']=='PUT' ) {
 			$result = filesystem::put($request['directory'], $request['filename']);
 		} else if ( $request['method']=='DELETE' ) {
