@@ -27,6 +27,51 @@ class http {
 		self::$format = $format;
 	}
 
+	private static function parseAuthUser($auth) {
+		return explode(':',base64_decode(substr($auth, 6)));
+	}
+
+	public static function getUser()
+	{
+		$checks = [ 
+			'PHP_AUTH_USER'               => false, 
+			'REMOTE_USER'                 => false, 
+			'REDIRECT_REMOTE_USER'        => false,
+			'HTTP_AUTHORIZATION'          => [self,parseAuthUser],
+			'REDIRECT_HTTP_AUTHORIZATION' => [self,parseAuthUser]
+		];
+		foreach ( $checks as $check => $parse ) {
+			if ( isset($_SERVER[$check]) ) {
+				if ($parse) {
+					return call_user_func($parse, $_SERVER[$check])[0];
+				} else {
+					return $_SERVER[$check];
+				}
+			}
+		}
+		return '';
+	}
+
+	public static function getPassword()
+	{
+		$checks = [ 
+			'PHP_AUTH_PW'                 => false, 
+			'HTTP_AUTHORIZATION'          => [self,parseAuthUser],
+			'REDIRECT_HTTP_AUTHORIZATION' => [self,parseAuthUser]
+		];
+		foreach ( $checks as $check => $parse ) {
+			if ( isset($_SERVER[$check]) ) {
+				if ($parse) {
+					return call_user_func($parse, $_SERVER[$check])[1];
+				} else {
+					return $_SERVER[$check];
+				}
+			}
+		}
+		return '';
+	}
+
+
 	public static function request()
 	{
 		$target = $_SERVER["REQUEST_URI"];
@@ -37,19 +82,19 @@ class http {
 		$filename = isset($matches['filename']) ? $matches['filename'] : '';
 		$dirname  = ( isset($matches['dirname']) ? filesystem::path($matches['dirname']) : '/');
 		$docroot  = $_SERVER['DOCUMENT_ROOT'];
-		$subdir   = filesystem::path( substr( dirname($_SERVER['SCRIPT_FILENAME']), strlen($docroot) ) );
+		$subdir   = filesystem::path( substr( dirname(dirname($_SERVER['SCRIPT_FILENAME'])), strlen($docroot) ) );
 		$dirname  = filesystem::path( substr($dirname, strlen($subdir) ) );
-		return [
+		$request = [
 			'protocol'  => $_SERVER['SERVER_PROTOCOL']?:'HTTP/1.1',
 			'method'    => $_SERVER['REQUEST_METHOD'],
 			'target'    => '/'.$target,
 			'directory' => $dirname,
 			'filename'  => $filename,
-			'user'      => isset($_SERVER['REMOTE_USER']) ? $_SERVER['REMOTE_USER'] : (
-							isset($_SERVER['REDIRECT_REMOTE_USER']) ? $_SERVER['REDIRECT_REMOTE_USER'] :
-							''),
+			'user'      => self::getUser(),
+			'password'  => self::getPassword(),
 			'docroot'   => $docroot
 		];
+		return $request;
 	}
 
 	public static function response($status, $data='')

@@ -4,6 +4,7 @@
 	<link rel="stylesheet" type="text/css" href="https://simplyedit.io/css/style.css">
 	<style>
 		article h1 {
+			clear: both;
 			font-size: 20px;
 			line-height: 24px;
 			padding: 4px 20px;
@@ -14,13 +15,30 @@
 			padding-left: 20px;
 		}
 		article article h1 {
+			float: left;
+			clear: both;
 			background-color: white;
 			padding-left: 40px;
 		}
 		article article div {
 			font-size: 16px;
+			line-height: 24px;
+			padding-top: 16px;
+		}
+		.simplyedit-fail {
+			clear: both;
 			padding-left: 60px;
-		}			
+			padding-top: 0;
+			color: red;
+		}
+		.simplyedit-ok {
+			color: green;
+		}
+		.simplyedit-ok::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
 	</style>
 </head>
 <body class="info">
@@ -33,8 +51,13 @@
 	</header>
 	<main class="constrain-width">
 <?php
-	require_once('filesystem.php');
-	require_once('htpasswd.php');
+	require_once('config.php');
+	
+	if (function_exists('posix_getpwuid')) {
+		$user = posix_getpwuid(posix_geteuid())['name'];
+	} else {
+		$user = "[ user account unknown, try 'www-data']";
+	}
 
 	$checks = [
 		'.htaccess' => [
@@ -113,29 +136,29 @@
 				],
 				'readable' => [	
 					'title' => 'Is it readable?',
-					'check' => function() {
-						if ( is_readable(__DIR__.'/data/') ) {
-							if ( is_dir(__DIR__.'/data/') ) {
+					'check' => function() use ($user) {
+						if ( is_readable(filesystem::$basedir.'/data/') ) {
+							if ( is_dir(filesystem::$basedir.'/data/') ) {
 								ok();
 								return true;
 							} else {
-								fail('data/ is not a directory');
+								fail(filesystem::$basedir.'/data/ is not a directory');
 								return false;
 							}
 						} else {
-							fail('data directory is not readable');
+							fail(filesystem::$basedir.'/data/ directory is not readable. Grant read and write access for user '.$user);
 							return false;
 						}
 					}
 				],
 				'writable' => [
-					'title' => 'Is it writable',
-					'check' => function() {
-						if ( is_writable(__DIR__.'/data/') ) {
+					'title' => 'Is it writable?',
+					'check' => function() use ($user) {
+						if ( is_writable(filesystem::$basedir.'/data/') ) {
 							ok();
 							return true;
 						} else {
-							fail('data directory is not writable');
+							fail(filesystem::$basedir.'/data/ directory is not writable. Grant read and write access for user '.$user);
 							return false;
 						}
 					}
@@ -152,35 +175,35 @@
 							ok();
 							return true;
 						}
-						fail('img directory is missing');
+						fail(filesystem::$basedir.'/img/ directory is missing');
 						return false;
 					}
 				],
 				'readable' => [	
 					'title' => 'Is it readable?',
-					'check' => function() {
-						if ( is_readable(__DIR__.'/img/') ) {
-							if ( is_dir(__DIR__.'/img/') ) {
+					'check' => function() use ($user) {
+						if ( is_readable(filesystem::$basedir.'/img/') ) {
+							if ( is_dir(filesystem::$basedir.'/img/') ) {
 								ok();
 								return true;
 							} else {
-								fail('img/ is not a directory');
+								fail(filesystem::$basedir.'/img/ is not a directory');
 								return false;
 							}
 						} else {
-							fail('img directory is not readable');
+							fail(filesystem::$basedir.'/img/ directory is not readable. Grant read and write access for user '.$user);
 							return false;
 						}
 					}
 				],
 				'writable' => [
-					'title' => 'Is it writable',
-					'check' => function() {
-						if ( is_writable(__DIR__.'/img/') ) {
+					'title' => 'Is it writable?',
+					'check' => function() use ($user) {
+						if ( is_writable(filesystem::$basedir.'/img/') ) {
 							ok();
 							return true;
 						} else {
-							fail('img directory is not writable');
+							fail(filesystem::$basedir.'/img/ directory is not writable. Grant read and write access for user '.$user);
 							return false;
 						}
 					}
@@ -203,29 +226,29 @@
 				],
 				'readable' => [	
 					'title' => 'Is it readable?',
-					'check' => function() {
-						if ( is_readable(__DIR__.'/files/') ) {
-							if ( is_dir(__DIR__.'/files/') ) {
+					'check' => function() use ($user) {
+						if ( is_readable(filesystem::$basedir.'/files/') ) {
+							if ( is_dir(filesystem::$basedir.'/files/') ) {
 								ok();
 								return true;
 							} else {
-								fail('files/ is not a directory');
+								fail(filesystem::$basedir.'/files/ is not a directory');
 								return false;
 							}
 						} else {
-							fail('files directory is not readable');
+							fail(filesystem::$basedir.'/files/ directory is not readable. Grant read and write access for user '.$user);
 							return false;
 						}
 					}
 				],
 				'writable' => [
-					'title' => 'Is it writable',
-					'check' => function() {
-						if ( is_writable(__DIR__.'/files/') ) {
+					'title' => 'Is it writable?',
+					'check' => function() use ($user) {
+						if ( is_writable(filesystem::$basedir.'/files/') ) {
 							ok();
 							return true;
 						} else {
-							fail('files directory is not writable');
+							fail(filesystem::$basedir.'/files/ directory is not writable. Grant read and write access for user '.$user);
 							return false;
 						}
 					}
@@ -235,11 +258,58 @@
 		'key' => [
 			'title' => 'Checking API keys',
 			'check' => function() {
-				ok();
-				return true;
+				// check index.html
+				// check templates/
+				$files = array( filesystem::$basedir.'/index.html' );
+				if ( is_dir(filesystem::$basedir.'/templates/') ) {
+					if ( !is_readable(filesystem::$basedir.'/templates/') ) {
+						fail(filesystem::$basedir.'/templates/ directory is not readable. Grant read access for user '.$user);
+						return false;
+					}
+					$dir = opendir(filesystem::$basedir.'/templates/');
+					if ( $dir ) {
+						while (false !== ($entry = readdir($dir))) {
+							$entry = filesystem::$basedir.'/templates/'.$entry;
+							if (is_file($entry) && is_readable($entry)) {
+								$files[] = $entry;
+							}
+						}
+					}
+				}
+				$errors = 0;
+				foreach ( $files as $file ) {
+					$error = checkKey($file);
+					if ( $error ) {
+						fail($error);
+						$errors++;
+					}
+				}
+				if ( !$errors ) {
+					ok();
+					return true;
+				} else {
+					return false;
+				}
 			}
 		]
 	];
+
+	function checkKey($file) {
+		global $user;
+		$contents = file_get_contents($file);
+		if ( $contents === false ) {
+			return 'Could not read '.$file.'. Grant read access for user '.$user;
+		}
+		if (!preg_match('/data-api-key\s*=\s*"([^"]*)"/',$contents, $matches)) {
+			return $file.' has no data-api-key attribute.';
+		}
+		if ($matches[1]=='localhost') {
+			return $file.' has API key "localhost", which will only work locally.';
+		}
+		if ($matches[1]=='simplyedit') {
+			return $file.' has an invalid API key "simplyedit", please grab a license key and enter it.';
+		}
+	}
 
 	function ok() {
 		echo '<div class="simplyedit-ok">OK</div>';

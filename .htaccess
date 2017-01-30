@@ -1,17 +1,19 @@
 RewriteEngine on
 <Limit PUT DELETE>
+  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
     RewriteCond %{REQUEST_METHOD} PUT
-    RewriteRule ^(.*)$ store.php [L]
+    RewriteRule ^(.*)$ simply-edit/store.php [L]
 
     RewriteCond %{REQUEST_METHOD} DELETE
-    RewriteRule ^(.*)$ store.php [L]
+    RewriteRule ^(.*)$ simply-edit/store.php [L]
 </Limit>
 <Limit GET POST>
-	RewriteRule ^logout$ logout.php [L]
+  RewriteRule ^logout$ simply-edit/logout.php [L]
 </Limit>
 
 Options +Indexes
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule .* router.php [L]
+RewriteRule .* simply-edit/router.php [L]
