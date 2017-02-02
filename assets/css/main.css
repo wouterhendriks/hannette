@@ -837,11 +837,11 @@
 	@media screen and (max-width: 960px) {
 
 		.row > * {
-			padding: 32px 0 0 32px;
+			padding: 32px 0 0 0;
 		}
 
 		.row {
-			margin: -32px 0 -1px -32px;
+			margin: -32px 0 -1px 0;
 		}
 
 		.row.uniform > * {
@@ -2091,8 +2091,8 @@
 		}
 
 	body.homepage #header {
-		height: 100vh;
-		min-height: 40em;
+		max-height: 70vh;
+		height: 600px;
 	}
 
 		body.homepage #header h1 {
@@ -2969,8 +2969,16 @@ body:not(.homepage) #main {
 	background: transparent;
 }
 
+.logos.fullwidth {
+  padding-left: 0;
+}
+
 .logos__logo-container {
 	text-align: center;
+}
+
+.row .logos__logo-container.rowitem {
+  padding-left: 0;
 }
 
 .logos__logo {
@@ -3042,6 +3050,10 @@ html.simply-edit #nav ul li ul li {
 
 form .formrow {
   margin: 0 0 15px;
+}
+
+.image.featured:empty {
+  display: none;
 }
 
 @media screen and (max-width: 736px) {
