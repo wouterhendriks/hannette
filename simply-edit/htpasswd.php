@@ -1,7 +1,4 @@
 <?php
-error_reporting(E_ERROR | E_WARNING);
-
-
 // Copyright (C) 2017 Muze <info@muze.nl>
 // based partly on https://elonen.iki.fi/code/misc-notes/htpasswd-php/
 //
@@ -85,7 +82,7 @@ error_reporting(E_ERROR | E_WARNING);
             $len  = strlen($plainpasswd);
             $text = $plainpasswd.'$apr1$'.$salt;
             $bin  = pack("H32", md5($plainpasswd.$salt.$plainpasswd));
-            for ($i = $len; $i > 0; $i -= 16) {
+            for ($i = $len; $i > 0; $i -= 16) { 
                 $text .= substr($bin, 0, min(16, $i));
             }
             for ($i = $len; $i > 0; $i >>= 1) {

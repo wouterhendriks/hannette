@@ -1,16 +1,11 @@
 <?php
-	error_reporting(E_ALL);
-	ini_set('display_errors',1);
+	require_once('config.php');
 
-	require_once('http.php');
-	require_once('filesystem.php');
+	$templateDir = '/templates/';
 
-	filesystem::basedir(__DIR__);
-	http::format('html');
+	http::format('html'); // set output format for errors to html instead of json
 
-	$templateDir = '/';
 	$request     = null;
-
 	$request     = http::request();
 	try {
 		$data        = json_decode( filesystem::get('/data/','data.json'), true );
@@ -32,10 +27,16 @@
 	if ( isset($data[$path]) ) {
 		$template = "index.html";
 
-		if( isset($data[$path]['data-simply-page-template']['content'])) {
-			$pageTemplate = $data[$path]['data-simply-page-template']['content'];
+		if( isset($data[$path]['data-simply-page-template'])) {
+			$pageTemplate = $data[$path]['data-simply-page-template'];
 			if (preg_match("/\.html$/", $pageTemplate) && filesystem::exists($templateDir . $pageTemplate)) {
 				$template = $pageTemplate;
+			} else if (!preg_match("/\.html$/", $pageTemplate)) {
+				echo '<!-- page template '.htmlspecialchars($pageTemplate).' skipped since it doesnt have the .html suffix -->';
+			} else if ( !filesystem::exists($templateDir) ) {
+				echo '<!-- template dir '.$templateDir.' not found -->';
+			} else {
+				echo '<!-- page template '.htmlspecialchars($pageTemplate).' not found in '.$templateDir.' -->';
 			}
 		}
 

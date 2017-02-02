@@ -13,7 +13,7 @@ class filesystem {
 
 	private static $allowed = [];
 	private static $checks  = [];
-	private static $basedir = __DIR__;
+	public  static $basedir = __DIR__;
 
 	public static function basedir($basedir)
 	{
