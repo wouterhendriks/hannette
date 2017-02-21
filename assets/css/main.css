@@ -3007,6 +3007,16 @@ body:not(.homepage) #main {
 	text-align: center;
 }
 
+.bannercarousel .section-banner p[data-simply-field="carousel description"] {
+  font-size: 0;
+}
+
+.bannercarousel .section-banner p[data-simply-field="carousel description"] img {
+  width: 300px;
+  height: 455px;
+  object-fit: cover;
+}
+
 #headerbgimage {
 	visibility: hidden;
 	position: absolute;
