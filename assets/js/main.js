@@ -34,7 +34,7 @@
     $('html').toggleClass('no-simply-edit', !simplyEditMode);
     $('html').toggleClass('simply-edit', simplyEditMode);
 
-    if (location.host === 'test.salonhannette.nl')
+    if ($('#form-next').length && location.host === 'test.salonhannette.nl')
       $('#form-next').attr('value', $('#form-next').attr('value').replace('www.', 'test.'));
 
     var $headerImage = $('#headerbgimage');
