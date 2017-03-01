@@ -3066,6 +3066,14 @@ form .formrow {
   display: none;
 }
 
+.msologo {
+  text-align: right;
+}
+
+.msologo a {
+  border: 0;
+}
+
 @media screen and (max-width: 736px) {
 	.header-phone {
 		position: fixed;
