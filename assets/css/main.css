@@ -2985,6 +2985,10 @@ body:not(.homepage) #main {
 	border-bottom: 0;
 }
 
+.logos__logo img {
+  max-width: 100%;
+}
+
 .header-phone {
 	position: absolute;
 	display: inline-block;
