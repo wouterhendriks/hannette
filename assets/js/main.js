@@ -3,8 +3,8 @@
 
   document.addEventListener("simply-content-loaded", function() {
 
-    $('meta[property="og:title"').attr('content', $('title').text());
-    $('meta[property="og:description"').attr('content', $('meta[name="description"]').attr('content'));
+    $('meta[property="og:title"]').attr('content', $('title').text());
+    $('meta[property="og:description"]').attr('content', $('meta[name="description"]').attr('content'));
 
     // apply photo share options to images in bannercarousels
     $('.bannercarousel p[data-simply-field="carousel description"] > img').each(function() {

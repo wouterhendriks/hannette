@@ -1,5 +1,8 @@
 <?php
   $imageurl = isset($_GET['foto']) ? $_GET['foto'] : "";
+  if ($imageurl != '') {
+    $size = getimagesize($imageurl);
+  }
 ?><!DOCTYPE HTML>
 <html>
 <head>
@@ -38,11 +41,23 @@
   <link rel="shortcut icon" href="/assets/img/favicon.png">
   <link rel="icon" href="/assets/img/favicon.png">
 
+  <?php
+    $currentLink = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+  ?>
+
+  <meta property="fb:app_id" content="1727412697287223"/>
+  <meta property="og:url" content="<?php echo($currentLink) ?>"/>
   <meta property="og:locale" content="nl_NL"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Portfolio Dames & Heren Salon Hannette" />
   <meta property="og:description" content="Doe inspiratie op voor uw nieuwe kapsel bij Dames & Heren Salon Hannette in Haaksbergen" />
   <meta property="og:image" content="<?php echo($imageurl); ?>" />
+  <?php
+  if ($size) {
+    echo '<meta property="og:image:width" content="' . $size[0] . '"/>';
+    echo '<meta property="og:image:height" content="' . $size[1] . '"/>';
+  }
+  ?>
 </head>
 <body>
   <script>
