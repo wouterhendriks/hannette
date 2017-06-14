@@ -1,4 +1,6 @@
-<!DOCTYPE HTML>
+<?php
+  $imageurl = isset($_GET['foto']) ? $_GET['foto'] : "";
+?><!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8"/>
@@ -29,18 +31,18 @@
   </script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title data-simply-field="meta title">Salon Hannette - Dames en Heren Salon Haaksbergen</title>
-  <meta name="author" content="Salon Hannette" data-simply-field="meta author">
-  <meta name="description" data-simply-field="meta description" content="Dames en Herensalon Hannette Haaksbergen"/>
+  <title data-simply-field="meta title">Portfolio Dames & Heren Salon Hannette</title>
+  <meta name="author" content="Salon Hannette" data-simply-field="meta author" />
+  <meta name="description" data-simply-field="meta description" content="Doe inspiratie op voor uw nieuwe kapsel bij Dames & Heren Salon Hannette in Haaksbergen" />
   <link rel="stylesheet" href="/assets/css/main.css"/>
   <link rel="shortcut icon" href="/assets/img/favicon.png">
   <link rel="icon" href="/assets/img/favicon.png">
 
   <meta property="og:locale" content="nl_NL"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Salon Hannette - Dames en Heren Salon Haaksbergen" />
-  <meta property="og:description" content="Dames en Herensalon Hannette Haaksbergen" />
-  <meta property="og:image" content="https://www.salonhannette.nl/img/Fotos-Nieuwe-Zaak/HeaderHomePageKapsalonHannette.png" />
+  <meta property="og:title" content="Portfolio Dames & Heren Salon Hannette" />
+  <meta property="og:description" content="Doe inspiratie op voor uw nieuwe kapsel bij Dames & Heren Salon Hannette in Haaksbergen" />
+  <meta property="og:image" content="<?php echo($imageurl); ?>" />
 </head>
 <body>
   <script>
@@ -102,121 +104,10 @@
     </nav>
   </div>
 
-  <div data-simply-list="sections" data-simply-sortable id="start">
-
-    <!-- Section type: carousel -->
-    <template data-simply-template="carousel">
-      <div class="bannercarousel">
-        <section id="banner" class="section-banner">
-          <header>
-            <h2 data-simply-field="carousel title" data-simply-content="text">Titel van de carousel</h2>
-            <p data-simply-field="carousel description"></p>
-          </header>
-        </section>
-
-        <section class="carousel">
-          <div class="reel">
-            <div class="carouselitems" data-simply-list="carousel items" data-simply-sortable>
-              <template>
-                <article>
-                  <div class="image featured" data-simply-field="carousel items image"><img src="/assets/img/pic02.jpg" alt=""/></div>
-                  <header>
-                    <h3 data-simply-field="carousel items title">Huiswijnen</h3>
-                  </header>
-                  <p data-simply-field="carousel items description">Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-                </article>
-              </template>
-            </div>
-          </div>
-        </section>
-      </div>
-    </template>
-
-    <!-- Section type: textblock -->
-    <template data-simply-template="textblock">
-      <div class="wrapper style2">
-        <article id="main" class="container special">
-          <span class="image featured" data-simply-field="textblock image"><img src="/assets/img/pic06.jpg" alt=""/></span>
-          <header>
-            <h2 data-simply-field="textblock title" data-simply-content="text">Titel van dit tekstblok</h2>
-            <p data-simply-field="textblock introduction" data-simply-content="text">Introductie van dit tekstblok</p>
-          </header>
-          <p data-simply-field="textblock description"></p>
-        </article>
-      </div>
-    </template>
-
-    <!-- Section type: highlights-->
-    <template data-simply-template="highlights">
-      <div class="wrapper style1">
-        <section id="features" class="container special">
-          <header>
-            <h2 data-simply-field="highlights title">Titel van 'hoogtepunten' blok</h2>
-            <p data-simply-field="highlights description"></p>
-          </header>
-          <div class="row">
-            <div class="fullwidth" data-simply-list="highlights items" data-simply-sortable>
-              <template>
-                <article class="4u 12u(mobile) special rowitem">
-                  <a href="#" class="image featured" data-simply-field="highlights items image"><img src="/assets/img/pic07.jpg" alt=""/></a>
-                  <header>
-                    <h3 data-simply-field="highlights items title"><a href="#">Titel van dit item</a></h3>
-                  </header>
-                  <p data-simply-field="highlights items description"></p>
-                </article>
-              </template>
-            </div>
-          </div>
-        </section>
-      </div>
-    </template>
-
-    <!-- Section type: logos -->
-    <template data-simply-template="logos">
-      <div class="wrapper style1 logos">
-        <section class="container special">
-          <div class="row">
-            <div class="fullwidth" data-simply-list="logos items" data-simply-sortable>
-              <template>
-                <article class="logos__logo-container 4u 12u(mobile) rowitem">
-                  <a href="#" class="logos__logo" data-simply-field="logos items link"><img src="/assets/img/logo-alcina.png" alt="Alcina" /></a>
-                </article>
-              </template>
-            </div>
-          </div>
-        </section>
-      </div>
-    </template>
-
-    <!-- Section type: contact -->
-    <template data-simply-template="contact">
-      <div class="wrapper style2">
-        <article id="main" class="container special">
-          <header>
-            <h2 data-simply-field="contact title" data-simply-content="text">Contact</h2>
-            <p data-simply-field="contact description">Vul onderstaande formulier in en we nemen zo spoedig mogelijk contact met u op.</p>
-          </header>
-          <form action="https://formspree.io/info@salonhannette.nl" method="post">
-            <input id="form-next" type="hidden" name="_next" value="http://www.salonhannette.nl/contact/verzonden/" />
-            <div class="formrow">
-              <label for="formname">Naam</label>
-              <input type="text" name="Naam" id="formname" required />
-            </div>
-            <div class="formrow">
-              <label for="formemail">E-mailadres</label>
-              <input type="email" name="E-mailadres" id="formemail" required />
-            </div>
-            <div class="formrow">
-              <label for="formmessage">Bericht</label>
-              <textarea name="Bericht" id="formmessage" required></textarea>
-            </div>
-            <div class="formrow">
-              <input type="submit" value="Verzenden" />
-            </div>
-          </form>
-        </article>
-      </div>
-    </template>
+  <div class="wrapper photodetails">
+    <article class="container special">
+      <img class="photodetails__image" src="<?php echo($imageurl) ?>" />
+    </article>
   </div>
 
   <div id="footer">

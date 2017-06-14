@@ -16,7 +16,8 @@
 		$data = [];
 	}
 
-	$path        = $request['target'];
+	$path        = $_SERVER['REQUEST_URI'];
+  $path        = explode('?', $path)[0];
 	$status      = 200;
 
 	if( !isset($data[$path]) ) {

@@ -1,6 +1,34 @@
 
 (function($) {
 
+  document.addEventListener("simply-content-loaded", function() {
+
+    $('meta[property="og:title"').attr('content', $('title').text());
+    $('meta[property="og:description"').attr('content', $('meta[name="description"]').attr('content'));
+
+    // apply photo share options to images in bannercarousels
+    $('.bannercarousel p[data-simply-field="carousel description"] > img').each(function() {
+      $(this).wrap('<span class="carousel-item-share"></span>');
+      var container = $(this).parent();
+
+      var shareLink = getAbsoluteUrl('/foto-details/?foto=' + encodeURIComponent(getAbsoluteUrl($(this).attr('src'))));
+      var overlayLink = '<a class="overlay" href="' + shareLink + '"><i class="fa fa-facebook"></i></a>';
+
+      container.append(overlayLink);
+
+      container.on('click', '.overlay', function(evt) {
+        evt.preventDefault();
+
+        FB.ui({
+          method: 'share',
+          href: shareLink,
+        });
+      });
+    });
+
+    $('#loaderoverlay').addClass('hide');
+  });
+
   //cache
   var headerImageWidth = 0;
   var headerImageHeight = 0;
@@ -274,11 +302,6 @@
           });
 
       });
-
-      // remove loader overlay (immediately when editing)
-      window.setTimeout(function () {
-        $('#loaderoverlay').addClass('hide');
-      }, simplyEditMode ? 0 : 500);
   });
 
 })(jQuery);
@@ -307,3 +330,13 @@ function getCoverCoordinates(inwidth, inheight, outwidth, outheight, fit)
          , left: (outwidth - (inwidth/scale))/2
          };
 }
+
+var getAbsoluteUrl = (function() {
+  var a = null;
+  return function(url) {
+    a = a || document.createElement('a');
+    a.href = url;
+
+    return a.href;
+  };
+})();

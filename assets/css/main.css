@@ -3078,6 +3078,55 @@ form .formrow {
   border: 0;
 }
 
+.carousel-item-share {
+  display: inline-block;
+  position: relative;
+}
+
+.carousel-item-share > img {
+  display: inline-block;
+}
+
+.carousel-item-share .overlay {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, .8);
+  opacity: 0;
+  transition: .3s;
+  z-index: 100;
+}
+
+.carousel-item-share .overlay .fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  border: 1px solid #3b5998;
+  border-radius: 50%;
+  color: #3b5998;
+  display: inline-block;
+  padding: 17px 25px 12px 24px;
+}
+
+.carousel-item-share:hover .overlay {
+  opacity: 1;
+}
+
+.photodetails {
+  padding: 3em 0;
+  margin-bottom: 0;
+}
+
+.photodetails__image {
+  max-width: 100%;
+  max-height: 500px;
+}
+
 @media screen and (max-width: 736px) {
 	.header-phone {
 		position: fixed;
